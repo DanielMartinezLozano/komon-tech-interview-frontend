@@ -6,26 +6,21 @@ import DiscordLogo from "@/components/icons/DiscordIcon";
 import DiscordIcon from "@/components/icons/DiscordIcon";
 import InstagramIcon from "@/components/icons/InstagramIcon";
 import SocialMediaTable from "@/components/SocialMediaTable";
+import Link from "next/link";
 
 export default function Home() {
   return (
     <div>
-      <Head>
-        <title>Komon Tech Interview Frontend</title>
-      </Head>
-
-      <main className="shadow-lg min-h-screen">
-        <header className="border-b-2">
-          <KomonLogo className="h-auto max-w-xs" />
-        </header>
-        <body className="px-4">
-          <h1 className="my-6">Connect</h1>
-
-          <SocialMediaTable />
-        </body>
-      </main>
-
-      <footer></footer>
+      <Link href="/connections">
+        <div className="shadow-lg text-center py-8 px-4 my-8 rounded-lg bg-indigo-400">
+          <h3 className="font-bold text-xl">Connections</h3>
+        </div>
+      </Link>
+      <Link href="/content">
+        <div className="shadow-lg text-center py-8 px-4 my-8 rounded-lg bg-indigo-400">
+          <h3 className="font-bold text-xl">Content</h3>
+        </div>
+      </Link>
     </div>
   );
 }

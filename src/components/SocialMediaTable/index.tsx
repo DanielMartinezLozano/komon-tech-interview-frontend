@@ -4,7 +4,7 @@ import InstagramIcon from "../icons/InstagramIcon";
 import TwitterIcon from "../icons/TwitterIcon";
 
 const SocialMediaTable = () => {
-  const socialMediaPlatforms: { text: string; icon: ReactElement }[] = [
+  const socialMediaPlatforms: SocialMediaTableItem[] = [
     {
       text: "Twitter",
       icon: <TwitterIcon className=" stroke-black fill-black" />,
