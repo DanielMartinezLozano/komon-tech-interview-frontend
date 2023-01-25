@@ -13,6 +13,11 @@ body {
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+body {
+  background: url("../public/body-bg-image.png") no-repeat center fixed;
+  background-size: 475px 100%;
+}
+
 a {
   color: inherit;
   text-decoration: none;

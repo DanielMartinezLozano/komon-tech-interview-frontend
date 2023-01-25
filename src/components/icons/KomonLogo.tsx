@@ -11,7 +11,7 @@ const KomonLogo = ({ className = "" }: IconProps) => {
       <path
         d="M120 312.951L309.378 173.598V273.646L120 413V312.951Z"
         fill="#1D1D1B"
-        fill-opacity="0.5"
+        fillOpacity="0.5"
       />
       <path d="M120 127.146H484.463V201.468H120V127.146Z" fill="#1D1D1B" />
       <path

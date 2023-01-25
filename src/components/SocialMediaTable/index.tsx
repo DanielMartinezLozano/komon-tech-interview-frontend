@@ -7,20 +7,20 @@ const SocialMediaTable = () => {
   const socialMediaPlatforms: SocialMediaTableItem[] = [
     {
       text: "Twitter",
-      icon: <TwitterIcon className=" stroke-black fill-black" />,
+      icon: <TwitterIcon className=" stroke-black" />,
     },
     {
       text: "Discord",
-      icon: <DiscordIcon className=" stroke-black fill-black" />,
+      icon: <DiscordIcon className=" stroke-black" />,
     },
     {
       text: "Instagram",
-      icon: <InstagramIcon className=" stroke-black fill-black" />,
+      icon: <InstagramIcon className=" stroke-black" />,
     },
   ];
 
   return (
-    <div className="shadow-xl rounded-xl p-6">
+    <div className="shadow-xl rounded-xl p-6 bg-white">
       <h2>Social Media</h2>
       <ul>
         {socialMediaPlatforms.map((platform) => (

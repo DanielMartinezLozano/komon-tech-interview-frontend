@@ -8,15 +8,15 @@ const Layout = ({ children }) => {
         <title>Komon Tech Interview Frontend</title>
       </Head>
 
-      <main className="shadow-lg min-h-screen">
-        <header className="border-b-2">
+      <section className="shadow-lg min-h-screen">
+        <header className="border-b-2 bg-white">
           <KomonLogo className="h-auto max-w-xs" />
         </header>
 
-        <body className="px-4">{children}</body>
+        <main className="px-4">{children}</main>
 
         <footer></footer>
-      </main>
+      </section>
     </>
   );
 };
