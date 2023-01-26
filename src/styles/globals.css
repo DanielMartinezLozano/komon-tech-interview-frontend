@@ -50,6 +50,11 @@ h2 {
   font-weight: 600;
 }
 
+h3 {
+  font-size: 27px;
+  font-weight: 600;
+}
+
 ul {
   padding: 0;
   list-style: none;
