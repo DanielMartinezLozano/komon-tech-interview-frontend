@@ -3,6 +3,7 @@ import ChevronIcon from "../icons/ChevronIcon";
 import DiscordIcon from "../icons/DiscordIcon";
 import InstagramIcon from "../icons/InstagramIcon";
 import TwitterIcon from "../icons/TwitterIcon";
+import LoginModal from "../LoginModal";
 
 const SocialMediaTable = () => {
   const [socialMediaSelected, setSocialMediaSelected] =
@@ -34,36 +35,10 @@ const SocialMediaTable = () => {
       <h2>Social Media</h2>
       <ul>
         {socialMediaSelected ? (
-          <div className="grid gap-6">
-            <span className="flex items-center gap-2 pt-4">
-              <button onClick={() => handleSelectSocialMedia(null)}>
-                <ChevronIcon />
-              </button>
-              <h3>Sign in with {socialMediaSelected.text}</h3>
-              {socialMediaSelected.icon}
-            </span>
-            <input
-              data-testid="input-email"
-              type="email"
-              id="email"
-              className="bg-dark-05 text-dark-20 focus:text-dark-75 p-3 pl-10 h-11  border-dark-20 border border-solid text-sm rounded-lg leading-tight font-euclid-triangle block w-full placeholder-asphalt"
-              placeholder="Username or E-mail"
-            />
-            <input
-              data-testid="input-password"
-              type="password"
-              id="password"
-              className="bg-dark-05 text-dark-20 focus:text-dark-75 p-3 pl-10 h-11  border-dark-20 border border-solid text-sm rounded-lg leading-tight font-euclid-triangle block w-full placeholder-asphalt"
-              placeholder="Password"
-            ></input>
-            <button
-              type="button"
-              data-testid="user-login-module-login-button"
-              className="w-full text-white bg-black border border-transparent hover:bg-drak-75 focus:ring-drak-20 disabled:hover:bg-dark-05 focus:ring-4 group flex items-center justify-center py-2 text-center font-medium focus:z-10 rounded-lg dark:border-solid dark:border-white font-euclid-triangle"
-            >
-              Log in
-            </button>
-          </div>
+          <LoginModal
+            socialMediaSelected={socialMediaSelected}
+            handleSelectSocialMedia={handleSelectSocialMedia}
+          />
         ) : (
           socialMediaPlatforms.map((platform) => (
             <li key={platform.text} className="my-6">
