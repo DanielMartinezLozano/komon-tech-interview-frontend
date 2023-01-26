@@ -2,16 +2,17 @@ import { getPosts } from "core/server-side";
 import Image from "next/image";
 
 const Content = ({ posts }: ContentPageProps) => {
-  console.log(posts);
   return (
     <>
       <h1 className="my-6">Content</h1>
-      <ul className="grid grid-cols-3 gap-x-4 gap-y-8">
-        {posts.length === 0 && <p>Loading...</p>}
+      <ul
+        className="grid grid-cols-3 gap-x-4 gap-y-8"
+        data-testid="content-post-list"
+      >
         {posts.length > 0 &&
           posts.map((post) => (
             <li key={post.id}>
-              <div className="max-h-40">
+              <div>
                 <Image
                   src={post.image}
                   alt={post.caption}
