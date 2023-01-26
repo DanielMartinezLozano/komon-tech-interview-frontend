@@ -1,4 +1,4 @@
-import { ReactElement, useState } from "react";
+import { useState } from "react";
 import ChevronIcon from "../icons/ChevronIcon";
 import DiscordIcon from "../icons/DiscordIcon";
 import InstagramIcon from "../icons/InstagramIcon";
