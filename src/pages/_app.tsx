@@ -1,12 +1,21 @@
-import { AppProps } from "next/app";
+import App, { AppProps } from "next/app";
 import "tailwindcss/tailwind.css";
 import "@/styles/globals.css";
 import Layout from "@/components/Layout";
+import { AuthProvider } from "context/AuthContext";
 
-export default function App({ Component, pageProps }: AppProps) {
+function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <AuthProvider>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </AuthProvider>
   );
 }
+
+MyApp.getInitialProps = async (appContext) => {
+  const appProps = await App.getInitialProps(appContext);
+  return { ...appProps };
+};
+export default MyApp;
