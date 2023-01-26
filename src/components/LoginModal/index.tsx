@@ -54,6 +54,7 @@ const LoginModal = ({ socialMediaSelected, handleSelectSocialMedia }) => {
         type="submit"
         data-testid="user-login-module-login-button"
         className="w-full text-white bg-black border border-transparent hover:bg-drak-75 focus:ring-drak-20 disabled:hover:bg-dark-05 focus:ring-4 group flex items-center justify-center py-2 text-center font-medium focus:z-10 rounded-lg dark:border-solid dark:border-white font-euclid-triangle"
+        disabled={!email || !password}
         onClick={() => handleLogin(email, password)}
       >
         Log in

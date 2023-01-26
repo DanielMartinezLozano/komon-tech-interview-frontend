@@ -8,7 +8,9 @@ export function useLocalStorage<T>(key: string, fallbackValue: T) {
   }, [fallbackValue, key]);
 
   useEffect(() => {
-    localStorage.setItem(key, JSON.stringify(value));
+    value
+      ? localStorage.setItem(key, JSON.stringify(value))
+      : localStorage.setItem(key, null);
   }, [key, value]);
 
   return [value, setValue] as const;
